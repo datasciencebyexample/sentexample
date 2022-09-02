@@ -40,7 +40,7 @@ function searchPaper2(key) {
     $("#result").empty();
     $.getJSON({
         url: "/search",
-	data: {'query':key},
+	data: {'index':'word','data':{'query':key}},
 	type: 'POST',
         success: function (result) {
 	    //console.log("hello");
@@ -98,7 +98,7 @@ function searchExample(key) {
     $("#result").empty();
     $.getJSON({
         url: "/search_example",
-	data: {'query':key},
+	data: {'index':'example','data':{'query':key}},
 	type: 'POST',
         success: function (result) {
 	    //console.log("hello");
