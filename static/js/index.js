@@ -41,10 +41,11 @@ function searchPaper2(key) {
     $.getJSON({
         url: "https://7vbxmqkrzg.execute-api.us-east-1.amazonaws.com/prod/",
 	data: {'index':'word','data':{'query':key}},
-	"headers": {
-              "accept": "application/json",
-              "Access-Control-Allow-Origin":"*"
-          },
+	headers: {
+		  "access-control-allow-origin": "*",
+		  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+		  'Access-Control-Allow-Methods': '*',
+		},
 	type: 'POST',
         success: function (result) {
 	    //console.log("hello");
@@ -103,10 +104,11 @@ function searchExample(key) {
     $.getJSON({
         url: "https://7vbxmqkrzg.execute-api.us-east-1.amazonaws.com/prod/",
 	data: {'index':'example','data':{'query':key}},
-	"headers": {
-              "accept": "application/json",
-              "Access-Control-Allow-Origin":"*"
-          },
+	headers: {
+		  "access-control-allow-origin": "*",
+		  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+		  'Access-Control-Allow-Methods': '*',
+		},
 	type: 'POST',
         success: function (result) {
 	    //console.log("hello");
