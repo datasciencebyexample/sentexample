@@ -41,6 +41,7 @@ function searchPaper2(key) {
     $.getJSON({
         url: "https://7vbxmqkrzg.execute-api.us-east-1.amazonaws.com/prod/",
 	data: {'index':'word','data':{'query':key}},
+	callback: "?",
 	type: 'POST',
         success: function (result) {
 	    //console.log("hello");
@@ -99,6 +100,7 @@ function searchExample(key) {
     $.getJSON({
         url: "https://7vbxmqkrzg.execute-api.us-east-1.amazonaws.com/prod/",
 	data: {'index':'example','data':{'query':key}},
+	callback: "?",
 	type: 'POST',
         success: function (result) {
 	    //console.log("hello");
