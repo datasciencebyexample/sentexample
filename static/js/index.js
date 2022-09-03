@@ -65,10 +65,11 @@ function recommend(key) {
 	 
 	.then(function(result)
 	  {
-	   //console.log(result)
+	   console.log(result)
 	  
 	  
 	  //do stuff
+	    console.log(result['results'])
 		let res = result['results'];
 		console.log(res)
 		
