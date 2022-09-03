@@ -61,7 +61,7 @@ function recommend(key) {
 	})
 	 
 	// Converting to JSON
-	.then(response => response.json())
+	//.then(response => response.json())
 	 
 	.then(function(result)
 	  {
@@ -70,6 +70,7 @@ function recommend(key) {
 	  
 	  //do stuff
 	    console.log(result['results'])
+		console.log(result.results)
 		let res = result['results'];
 		console.log(res)
 		
