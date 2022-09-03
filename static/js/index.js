@@ -69,7 +69,7 @@ function recommend(key) {
 	  
 	  
 	  //do stuff
-		let res = result.results;
+		let res = result['results'];
 		console.log(res)
 		
 		// 利用for插入每一个结果
