@@ -66,7 +66,8 @@ function recommend(key) {
 	.then(function(result)
 	  {
 	   console.log(result)
-	  
+	   var result = $.parseJSON(result)
+	   console.log(result)
 	  
 	  //do stuff
 	    console.log(result['results'])
