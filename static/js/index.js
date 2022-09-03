@@ -63,11 +63,49 @@ function recommend(key) {
 	// Converting to JSON
 	.then(response => response.json())
 	 
-	.then(function(data)
-	  {console.log(data)
+	.then(function(result)
+	  {
+	 //console.log(result)
+	  
 	  
 	  //do stuff
-	
+		res = result.results;
+
+		// 利用for插入每一个结果
+		if (res.length) {
+			for (i = 0; i < res.length; i++) {
+				// 将返回的结果包装成HTML
+				resultItem =
+					`
+					<div class='col-md-12 mb-4'>
+						<div class='card mb-12 shadow-sm'>
+							<div class='card-body'>
+								<h5>` +
+					res[i].word  +
+				   `</small></h5>
+								<p class='text-muted' style='margin-bottom: 0.5em'>` + "Phonetic: " +
+					res[i].phonetic +
+					`</p>
+								<p class='card-text'>` +"Chinese translation: "+
+					res[i].translation +
+					`</p>
+							</div>
+						</div>
+					</div>
+				`;
+				// 插入HTML到result中
+				$("#result").append(resultItem);
+			}
+
+			// 搜索完以后让搜索框移上去，带有动画效果
+			$("section.jumbotron").animate({
+				margin: "0"
+			});
+			// 显示搜索结果的部分
+			$("#resultSection").show();
+			// 清空输入联想
+			$("#suggestList").empty();
+		}
 	  
 	}).catch(error => console.error('Error:', error)); 
   
@@ -130,6 +168,7 @@ function searchPaper2(key) {
                 // 清空输入联想
                 $("#suggestList").empty();
             }
+			
         }
     });
 }
