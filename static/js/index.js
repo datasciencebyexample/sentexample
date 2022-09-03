@@ -61,7 +61,7 @@ function recommend(key) {
 	})
 	 
 	// Converting to JSON
-	//.then(response => response.json())
+	.then(response => response.json())
 	 
 	.then(function(result)
 	  {
@@ -72,10 +72,10 @@ function recommend(key) {
 	    console.log(result['results'])
 		console.log(result.results)
 		let res = result['results'];
-		console.log(res)
+		
 		
 		// 利用for插入每一个结果
-		if (res.length) {
+		if (result['results'].length) {
 			for (i = 0; i < res.length; i++) {
 				// 将返回的结果包装成HTML
 				resultItem =
