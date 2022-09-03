@@ -7,8 +7,8 @@ $(document).ready(function () {
         keyword = $("#keyword").val();
 	filter = $("#filter").val();
 	if(filter == 'word'){
-            searchPaper2(keyword);
-			//recommend(keyword);
+            //searchPaper2(keyword);
+			recommend(keyword);
 
 	}
 	else{
