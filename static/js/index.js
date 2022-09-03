@@ -49,8 +49,8 @@ function recommend(key) {
 		
 		// Adding body or contents to send
 		body: JSON.stringify({
-			"spendings":input_values.entry,
-			"selected_cards":prev_cards
+			"index":"word",
+			"data":{"query":key}
 			
 		}),
 		 
