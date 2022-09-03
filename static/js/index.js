@@ -58,9 +58,9 @@ function recommend(key) {
 		}),
 		 
 		// Adding headers to the request
-		headers: {
-			"Content-type": "application/json; charset=UTF-8"
-		}
+		//headers: {
+		//	"Content-type": "application/json; charset=UTF-8"
+		//}
 	})
 	 
 	// Converting to JSON
