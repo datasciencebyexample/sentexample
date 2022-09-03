@@ -44,7 +44,7 @@ function searchPaper2(key) {
 	headers: {
 		  "access-control-allow-origin": "*",
 		  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-		  'Access-Control-Allow-Methods': '*',
+		  
 		},
 	type: 'POST',
         success: function (result) {
@@ -107,7 +107,7 @@ function searchExample(key) {
 	headers: {
 		  "access-control-allow-origin": "*",
 		  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-		  'Access-Control-Allow-Methods': '*',
+		 
 		},
 	type: 'POST',
         success: function (result) {
