@@ -25,13 +25,55 @@ $(document).keyup(function (event) {
     if (event.keyCode == 13) {
 	filter = $("#filter").val();
 	if(filter == 'word'){
-            searchPaper2($("#keyword").val());
+            //searchPaper2($("#keyword").val());
+			recommend($("#keyword").val());
 	}
 	else{
 	    searchExample($("#keyword").val());
 	}
     }
 });
+
+
+function recommend(key) {
+  // Grab the values from the input
+  
+  // call api
+  // POST request using fetch()
+	fetch("https://7vbxmqkrzg.execute-api.us-east-1.amazonaws.com/prod/", {
+		
+		mode: "cors",
+		// Adding method type
+		method: "POST",
+		
+		// Adding body or contents to send
+		body: JSON.stringify({
+			"spendings":input_values.entry,
+			"selected_cards":prev_cards
+			
+		}),
+		 
+		// Adding headers to the request
+		headers: {
+			"Content-type": "application/json; charset=UTF-8"
+		}
+	})
+	 
+	// Converting to JSON
+	.then(response => response.json())
+	 
+	.then(function(data)
+	  {console.log(data)
+	  
+	  //do stuff
+	  
+	}).catch(error => console.error('Error:', error)); 
+  
+	//console.log(results);
+  
+  
+}
+
 
 
 
