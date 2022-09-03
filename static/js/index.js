@@ -65,11 +65,11 @@ function recommend(key) {
 	 
 	.then(function(result)
 	  {
-	   console.log(result)
+	   //console.log(result)
 	  
 	  
 	  //do stuff
-		res = result.results;
+		let res = result.results;
 		console.log(res)
 		
 		// 利用for插入每一个结果
