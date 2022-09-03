@@ -39,7 +39,7 @@ function searchPaper2(key) {
     // 首先清空result中的内容以便内容填入
     $("#result").empty();
     $.getJSON({
-        url: "https://7vbxmqkrzg.execute-api.us-east-1.amazonaws.com/prod/",
+        url: "https://7vbxmqkrzg.execute-api.us-east-1.amazonaws.com/prod/?callback=",
 	data: {'index':'word','data':{'query':key}},
 	
 	type: 'POST',
@@ -98,7 +98,8 @@ function searchExample(key) {
     // 首先清空result中的内容以便内容填入
     $("#result").empty();
     $.getJSON({
-        url: "https://7vbxmqkrzg.execute-api.us-east-1.amazonaws.com/prod/",
+        url: "https://7vbxmqkrzg.execute-api.us-east-1.amazonaws.com/prod/?callback=",
+		
 	data: {'index':'example','data':{'query':key}},
 	
 	type: 'POST',
