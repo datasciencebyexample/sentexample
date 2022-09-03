@@ -7,7 +7,8 @@ $(document).ready(function () {
         keyword = $("#keyword").val();
 	filter = $("#filter").val();
 	if(filter == 'word'){
-            searchPaper2(keyword);
+            //searchPaper2(keyword);
+			recommend(keyword);
 
 	}
 	else{
@@ -66,6 +67,7 @@ function recommend(key) {
 	  {console.log(data)
 	  
 	  //do stuff
+	
 	  
 	}).catch(error => console.error('Error:', error)); 
   
