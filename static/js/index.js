@@ -120,7 +120,7 @@ function recommend(key) {
 
 
 
-function recommendExamplekey) {
+function recommendExample(key) {
     // 首先清空result中的内容以便内容填入
     $("#result").empty();
   
