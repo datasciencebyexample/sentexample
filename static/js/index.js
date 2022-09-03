@@ -42,8 +42,7 @@ function searchPaper2(key) {
         url: "https://7vbxmqkrzg.execute-api.us-east-1.amazonaws.com/prod/",
 	data: {'index':'word','data':{'query':key}},
 	headers: {
-		  "access-control-allow-origin": "*",
-		  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+		 'Access-Control-Allow-Headers': 'Content-Type, Authorization',
 		  
 		},
 	type: 'POST',
@@ -105,8 +104,7 @@ function searchExample(key) {
         url: "https://7vbxmqkrzg.execute-api.us-east-1.amazonaws.com/prod/",
 	data: {'index':'example','data':{'query':key}},
 	headers: {
-		  "access-control-allow-origin": "*",
-		  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+		 'Access-Control-Allow-Headers': 'Content-Type, Authorization',
 		 
 		},
 	type: 'POST',
