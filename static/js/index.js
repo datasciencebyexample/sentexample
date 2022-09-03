@@ -46,7 +46,7 @@ function recommend(key) {
   // POST request using fetch()
 	fetch("https://7vbxmqkrzg.execute-api.us-east-1.amazonaws.com/prod/", {
 		
-		mode: "cors",
+		//mode: "cors",
 		// Adding method type
 		method: "POST",
 		
